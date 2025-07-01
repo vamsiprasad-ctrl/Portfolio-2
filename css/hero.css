@@ -1,9 +1,4 @@
-/* === GENERAL FIXES === */
-body {
-  overflow-x: hidden;
-}
-
-/* Hero section styles */
+/* Base Hero Styles */
 .premium-hero, .modern-hero-section, .hero-content {
   min-height: 70vh;
   display: flex;
@@ -14,6 +9,7 @@ body {
   padding-top: var(--nav-height);
   overflow: hidden;
 }
+
 .premium-hero-bg, .hero-bg-animated {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -22,20 +18,26 @@ body {
   filter: blur(0px) brightness(1.1);
   animation: premium-float-bg 18s linear infinite alternate;
 }
+
 @keyframes premium-float-bg {
   0% { filter: blur(0px) brightness(1.1); }
   100% { filter: blur(2.5px) brightness(1.15); }
 }
-.premium-hero-content, .modern-hero-content {
+
+.premium-hero-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   min-height: 80vh;
   width: 100%;
   z-index: 2;
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 48px;
+  padding: 40px 20px;
 }
+
 .premium-hero-card.glass-card {
   background: rgba(44,46,74,0.82);
   border-radius: 32px;
@@ -50,16 +52,15 @@ body {
   position: relative;
   border: 2.5px solid rgba(155,35,234,0.13);
   animation: fadein 1.2s;
-  flex-wrap: wrap;
 }
 
-/* Profile */
-.premium-hero-profile, .modern-hero-profile, .hero-profile {
+.premium-hero-profile {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.premium-profile-img, .modern-profile-img, .profile-img {
+
+.premium-profile-img {
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -69,69 +70,59 @@ body {
   background: linear-gradient(120deg, #5f72bd 0%, #9b23ea 100%);
   animation: pulse 2.5s infinite;
 }
+
 @keyframes pulse {
   0%, 100% { box-shadow: 0 4px 32px #764ba244; }
   50% { box-shadow: 0 8px 48px #f093fb66; }
 }
 
-/* Hero Text */
-.premium-hero-text, .modern-hero-text, .hero-text {
+.premium-hero-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
   color: #f4f7fa;
 }
-.premium-hero-role, .premium-hero-typing, .premium-hero-status, .premium-hero-desc, .premium-hero-contact {
-  color: #f4f7fa;
-}
-.premium-hero-role {
-  color: var(--secondary);
-}
+
 .premium-hero-status {
-  color: #4ade80;
   font-size: 1.01rem;
   font-weight: 700;
   margin-bottom: 2px;
   display: flex;
   align-items: center;
   gap: 6px;
+  color: #4ade80;
 }
-.premium-hero-status i {
-  font-size: 0.9em;
-  margin-right: 4px;
-}
+
 .premium-hero-name {
   font-size: 2.6rem;
   font-weight: 800;
+  margin: 0 0 2px 0;
   letter-spacing: 1.5px;
   line-height: 1.1;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
+
 .premium-hero-role {
   font-size: 1.18rem;
   font-weight: 600;
+  color: var(--secondary);
   margin-bottom: 2px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.divider-dot {
-  color: var(--accent);
-  font-size: 1.3em;
-  margin: 0 6px;
-}
+
 .premium-hero-typing {
   font-size: 1.15rem;
   font-weight: 500;
+  color: var(--accent);
   min-height: 2.2em;
   margin-bottom: 2px;
-  color: var(--accent);
 }
+
 .premium-hero-desc {
   font-size: 1.08rem;
   opacity: 0.92;
@@ -139,114 +130,134 @@ body {
   margin-top: 2px;
   max-width: 480px;
 }
-.premium-hero-contact {
-  font-size: 1.01rem;
-  margin-top: 6px;
-}
+
 .premium-hero-contact a {
   color: var(--primary);
   text-decoration: underline dotted;
   transition: color 0.2s;
 }
-.premium-hero-contact a:hover {
-  color: var(--accent);
-}
 
-/* Buttons */
-.premium-hero-buttons, .modern-hero-buttons, .hero-buttons {
+.premium-hero-buttons {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
+
 .premium-btn-glass {
   background: rgba(255,255,255,0.13);
-  color: var(--primary) !important;
+  color: var(--primary);
   border-radius: 12px;
   padding: 10px 24px;
   font-weight: 700;
   border: 2px solid var(--primary);
   box-shadow: 0 2px 8px #5f72bd22;
-}
-.premium-btn-glass:hover, .premium-btn-glass:focus {
-  background: var(--primary);
-  color: #fff !important;
-  box-shadow: 0 4px 16px #9b23ea33;
+  transition: 0.2s all;
 }
 
-/* Social Links */
 .premium-social-bar {
   display: flex;
   gap: 18px;
-  margin-top: 8px;
   background: rgba(44,46,74,0.7);
   border-radius: 16px;
   padding: 10px 18px;
   box-shadow: 0 2px 12px #5f72bd22;
 }
+
 .premium-social-bar a {
   color: var(--primary);
   font-size: 1.7rem;
+  transition: 0.2s all;
   text-shadow: 0 2px 8px #9b23ea33;
-  transition: color 0.2s, transform 0.2s;
-}
-.premium-social-bar a:hover {
-  color: var(--accent);
-  transform: scale(1.18);
-  text-shadow: 0 4px 16px #fbbf2444;
 }
 
-/* Background animation */
 .hero-bg-animated {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 0;
   background: radial-gradient(circle at 20% 30%, #f093fb33 0%, transparent 60%),
               radial-gradient(circle at 80% 70%, #667eea33 0%, transparent 60%);
+  pointer-events: none;
   animation: float-bg 12s linear infinite alternate;
 }
+
 @keyframes float-bg {
   0% { background-position: 20% 30%, 80% 70%; }
   100% { background-position: 30% 40%, 70% 60%; }
 }
 
-/* Responsive Breakpoints */
+.hero-parallax {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 120px;
+  background: url('data:image/svg+xml...') repeat-x;
+  z-index: 1;
+  pointer-events: none;
+  animation: parallax 12s linear infinite alternate;
+}
+
+@keyframes parallax {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 200px; }
+}
 @media (max-width: 900px) {
-  .hero-content, .modern-hero-content {
+  .premium-hero-content {
     flex-direction: column-reverse;
     gap: 32px;
     text-align: center;
+    padding: 30px 16px;
   }
-  .hero-profile, .modern-hero-profile {
-    justify-content: center;
-    margin-bottom: 16px;
-  }
-  .hero-text, .modern-hero-text {
+
+  .premium-hero-text {
     align-items: center;
-    text-align: center;
+  }
+
+  .premium-hero-name {
+    font-size: 2.2rem;
+  }
+
+  .premium-hero-role, .premium-hero-typing {
+    font-size: 1.1rem;
+  }
+
+  .premium-hero-desc {
+    font-size: 1rem;
+  }
+
+  .premium-profile-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .premium-btn-glass {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+
+  .premium-social-bar a {
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 600px) {
-  .profile-img, .modern-profile-img {
-    width: 120px;
-    height: 120px;
+  .premium-profile-img {
+    width: 100px;
+    height: 100px;
   }
-  .greeting, .modern-greeting {
-    font-size: 1.5rem;
+
+  .premium-hero-name {
+    font-size: 1.8rem;
   }
-  .typed-text, .modern-typed {
-    font-size: 1.1rem;
+
+  .premium-hero-role {
+    font-size: 1rem;
   }
-  .premium-hero-card {
-    padding: 24px;
-    flex-direction: column;
-    gap: 24px;
-    text-align: center;
+
+  .premium-hero-typing {
+    font-size: 1rem;
   }
-  .premium-hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+
+  .premium-hero-desc {
+    font-size: 0.95rem;
   }
 }
