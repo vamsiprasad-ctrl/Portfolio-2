@@ -261,3 +261,99 @@
     font-size: 0.95rem;
   }
 }
+/* 🌐 Responsive Styles */
+@media (max-width: 768px) {
+  .hero-content,
+  .premium-hero-content,
+  .modern-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  .premium-hero-card.glass-card {
+    flex-direction: column;
+    padding: 32px 24px;
+    gap: 24px;
+  }
+
+  .premium-hero-profile,
+  .modern-hero-profile,
+  .hero-profile {
+    margin-bottom: 16px;
+  }
+
+  .premium-hero-text,
+  .hero-text {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .premium-hero-name {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .premium-hero-role {
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .premium-hero-typing {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .premium-hero-desc {
+    font-size: 1rem;
+    margin: 8px 0;
+    max-width: 90%;
+  }
+
+  .premium-hero-buttons,
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .premium-social-bar {
+    justify-content: center;
+    padding: 8px 16px;
+    margin-top: 16px;
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-hero-name {
+    font-size: 1.5rem;
+  }
+
+  .premium-hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .premium-btn-glass {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+  }
+
+  .premium-social-bar a {
+    font-size: 1.5rem;
+  }
+
+  .greeting {
+    font-size: 1.2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.1rem;
+  }
+}
