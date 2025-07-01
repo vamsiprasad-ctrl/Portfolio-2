@@ -80,20 +80,20 @@
       </div>
       <div class="premium-hero-text">
         <div class="premium-hero-status"><i class="fa fa-circle"></i> Open to Opportunities</div>
-        <div class="premium-hero-name">Purum Vamsi Prasad</div>
-        <div class="premium-hero-role">Web Developer <span class="divider-dot">•</span> ML Enthusiast</div>
+        <div class="premium-hero-name">Vamsi Prasad Purum </div>
+        <div class="premium-hero-role">Web Developer <span class="divider-dot">•</span> Data Science Enthusiast</div>
         <div class="premium-hero-typing">
           <span class="typed-text"></span><span class="cursor">|</span>
         </div>
-        <div class="premium-hero-desc">B.Tech in Computer Science (Data Science). Passionate about building impactful digital experiences and AI-driven solutions.</div>
+        <div class="premium-hero-desc">B.Tech in Computer Science and Engineering - Data Science. Passionate about building impactful digital experiences and AI-driven solutions.</div>
         <div class="premium-hero-buttons">
           <a href="#projects" class="btn premium-btn-glass">View Projects</a>
           <a href="#contact" class="btn premium-btn-glass">Contact Me</a>
           <a href="assets/resume.pdf" class="btn premium-btn-glass" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Resume</a>
         </div>
         <div class="premium-social-bar">
-          <a href="https://github.com/vamsiprasad-ctrl" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/vamsiprasadpuram" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/vamsiprasad-ctrl/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vamsiprasadpurum" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
@@ -558,8 +558,8 @@
         <ul>
           <li><i class="fa fa-envelope"></i> <a href="mailto:vamsipuram844@gmail.com">vamsipuram844@gmail.com</a></li>
           <li><i class="fa fa-phone"></i> <a href="tel:+916302159229">+91 6302159229</a></li>
-          <li><i class="fab fa-github"></i> <a href="https://github.com/vamsiprasad-ctrl" target="_blank" rel="noopener noreferrer">github.com/vamsiprasad-ctrl</a></li>
-          <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/vamsiprasadpuram" target="_blank" rel="noopener noreferrer">linkedin.com/vamsiprasadpuram</a></li>
+          <li><i class="fab fa-github"></i> <a href="https://github.com/vamsiprasad-ctrl/" target="_blank" rel="noopener noreferrer">github.com/vamsiprasad-ctrl</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vamsiprasadpurum" target="_blank" rel="noopener noreferrer">linkedin.com/in/vamsiprasadpurum</a></li>
         </ul>
         <a href="assets/resume.pdf" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Download Resume</a>
         <a href="assets/vamsi.vcf" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-address-card"></i> Download vCard</a>
@@ -577,8 +577,8 @@
   <div class="ultra-footer-bar"></div>
   <div class="ultra-footer-content">
     <div class="ultra-footer-social">
-      <a href="https://github.com/vamsiprasad-ctrl" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/vamsiprasadpuram" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/vamsiprasad-ctrl/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/vamsiprasadpurum" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
     <div class="ultra-footer-text">
       &copy; <span id="year"></span> <b>Purum Vamsi Prasad</b> &mdash; All rights reserved.
@@ -602,15 +602,27 @@
       });
     }
     // Hamburger menu ARIA state update
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    if (navToggle && navLinks) {
-      navToggle.addEventListener('click', function() {
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !expanded);
-        navLinks.style.display = !expanded ? 'block' : 'none';
-      });
-    }
+    window.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+          const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('open');
+        });
+        // Close menu when a nav link is clicked (on small screens)
+        navLinks.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            navLinks.style.removeProperty('display'); // Remove any inline display style
+            navLinks.style.removeProperty('transform'); // Remove any inline transform style
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+      console.log('Hamburger menu JS loaded');
+    });
     // Service worker registration with scope
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {

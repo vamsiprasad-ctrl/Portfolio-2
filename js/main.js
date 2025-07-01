@@ -349,10 +349,8 @@ if (backToTop) {
 const typedText = document.querySelector('.typed-text');
 const cursor = document.querySelector('.cursor');
 const phrases = [
-  'Web Developer',
-  'Machine Learning Enthusiast',
-  'Data Science Student',
-  'Problem Solver'
+  'Front End Developer',
+  'Data Science Enthusiast'
 ];
 let phraseIndex = 0, letterIndex = 0, isDeleting = false;
 function type() {
