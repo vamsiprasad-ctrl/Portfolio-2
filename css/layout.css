@@ -1,0 +1,21 @@
+/* Layout, containers, grid, section, and responsive design */
+.section {
+  padding: var(--section-padding);
+  background: var(--bg);
+  transition: background 0.3s;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 900px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 0 24px 0;
+  }
+}
