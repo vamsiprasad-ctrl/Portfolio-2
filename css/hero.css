@@ -783,4 +783,125 @@
   .hero-text h2 {
     font-size: 1.1rem;
   }
+/* 📱 Fix for Mobile Responsiveness */
+
+@media (max-width: 768px) {
+  .glass-hero-content,
+  .premium-hero-content,
+  .modern-hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .glass-hero-card,
+  .premium-hero-card.glass-card,
+  .modern-hero-card.glass-card {
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .glass-hero-text,
+  .premium-hero-text,
+  .modern-hero-text {
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .glass-hero-name,
+  .premium-hero-name,
+  .modern-hero-name {
+    font-size: 1.8rem;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .glass-hero-role,
+  .premium-hero-role,
+  .modern-hero-role,
+  .glass-hero-typing,
+  .premium-hero-typing,
+  .modern-hero-typing {
+    font-size: 1.05rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .glass-hero-desc,
+  .premium-hero-desc,
+  .modern-hero-desc {
+    font-size: 0.95rem;
+    margin: 8px auto;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .glass-hero-buttons,
+  .premium-hero-buttons,
+  .modern-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .glass-profile-img,
+  .premium-profile-img,
+  .modern-profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .premium-btn-glass {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .premium-social-bar,
+  .glass-social-bar,
+  .modern-social-bar {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    margin-top: 12px;
+  }
+
+  .premium-social-bar a,
+  .glass-social-bar a,
+  .modern-social-bar a {
+    font-size: 1.4rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .glass-hero-name,
+  .premium-hero-name,
+  .modern-hero-name {
+    font-size: 1.6rem;
+  }
+
+  .glass-hero-desc,
+  .premium-hero-desc,
+  .modern-hero-desc {
+    font-size: 0.9rem;
+  }
+
+  .glass-profile-img,
+  .premium-profile-img,
+  .modern-profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
