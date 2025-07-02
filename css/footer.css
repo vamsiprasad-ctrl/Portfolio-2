@@ -160,10 +160,11 @@
 }
 .ultra-footer-social a:hover,
 .ultra-footer-social a:focus-visible {
-  background: linear-gradient(120deg, #fbbf24 0%, #9b23ea 100%);
-  color: #23243a;
-  box-shadow: 0 4px 18px #fbbf2444;
-  transform: scale(1.13);
+  background: linear-gradient(120deg, #38bdf8 0%, #6366f1 100%);
+  color: #fff;
+  box-shadow: 0 0 24px 8px #38bdf8, 0 8px 32px #6366f144;
+  transform: scale(1.18);
+  text-shadow: 0 0 12px #fff, 0 2px 8px #fff8;
 }
 .ultra-footer-text {
   font-size: 1.18rem;

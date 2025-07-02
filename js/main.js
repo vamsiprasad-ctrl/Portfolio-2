@@ -349,15 +349,18 @@ if (backToTop) {
 const typedText = document.querySelector('.typed-text');
 const cursor = document.querySelector('.cursor');
 const phrases = [
-  'Front End Developer',
-  'Data Science Enthusiast'
+  { text: 'Front End Developer', color: '#38bdf8' },
+  { text: 'Data Science Enthusiast', color: '#7c3aed' },
+  { text: 'Machine Learning Explorer', color: '#f59e42' },
+  { text: 'Open Source Contributor', color: '#06b6d4' }
 ];
 let phraseIndex = 0, letterIndex = 0, isDeleting = false;
 function type() {
   if (!typedText) return;
   const currentPhrase = phrases[phraseIndex];
+  typedText.style.color = currentPhrase.color;
   if (isDeleting) {
-    typedText.textContent = currentPhrase.substring(0, letterIndex--);
+    typedText.textContent = currentPhrase.text.substring(0, letterIndex--);
     if (letterIndex < 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -366,8 +369,8 @@ function type() {
       setTimeout(type, 50);
     }
   } else {
-    typedText.textContent = currentPhrase.substring(0, letterIndex++);
-    if (letterIndex > currentPhrase.length) {
+    typedText.textContent = currentPhrase.text.substring(0, letterIndex++);
+    if (letterIndex > currentPhrase.text.length) {
       isDeleting = true;
       setTimeout(type, 1200);
     } else {
@@ -376,6 +379,12 @@ function type() {
   }
 }
 if (typedText) type();
+// Blinking cursor effect
+if (cursor) {
+  setInterval(() => {
+    cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+  }, 500);
+}
 
 // Live Clock in Footer
 const footerClock = document.getElementById('footer-clock');
@@ -388,7 +397,7 @@ updateClock();
 
 // AOS Animation Init
 window.addEventListener('DOMContentLoaded', () => {
-  if (window.AOS) AOS.init({ duration: 800, once: true });
+  if (window.AOS) AOS.init({ duration: 800, once: false });
 });
 
 // Parallax Effect
@@ -405,7 +414,7 @@ skillTags.forEach((tag, i) => {
   tag.style.transitionDelay = `${i * 60}ms`;
 });
 
-// Intersection Observer for Fade-in and Stats Animation
+// Intersection Observer for Fade-in and Stats/Skill Bar Animation
 const fadeEls = document.querySelectorAll('[data-aos]');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -441,6 +450,29 @@ if (statsSection) {
     if (entries[0].isIntersecting) animateStats();
   }, { threshold: 0.3 });
   statsObs.observe(statsSection);
+}
+
+// Skill Bar Animation
+const skillBars = document.querySelectorAll('.skill-bar .bar-fill');
+let skillsAnimated = false;
+function animateSkillBars() {
+  if (skillsAnimated) return;
+  skillBars.forEach(bar => {
+    const width = bar.style.width;
+    bar.style.width = '0';
+    setTimeout(() => {
+      bar.style.transition = 'width 1.2s cubic-bezier(.68,-0.55,.27,1.55)';
+      bar.style.width = width;
+    }, 100);
+  });
+  skillsAnimated = true;
+}
+const skillsSection = document.getElementById('skills');
+if (skillsSection) {
+  const skillsObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) animateSkillBars();
+  }, { threshold: 0.3 });
+  skillsObs.observe(skillsSection);
 }
 
 // Dynamic Year in Footer

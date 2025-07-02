@@ -89,7 +89,9 @@
   padding: 0 24px;
 }
 .project-card.modern-project-card:hover, .project-card.modern-project-card:focus {
-  transform: translateY(-10px) scale(1.045);
-  box-shadow: 0 0 32px 8px var(--secondary), 0 8px 32px #9b23ea44;
-  background: linear-gradient(120deg, #5f72bd22 0%, #9b23ea11 100%);
+  transform: translateY(-12px) scale(1.06);
+  box-shadow: 0 0 40px 12px var(--primary), 0 12px 40px #6366f144;
+  background: linear-gradient(120deg, #5f72bd33 0%, #9b23ea22 100%);
+  border: 2.5px solid var(--primary);
+  transition: box-shadow 0.22s, border 0.22s, background 0.3s, transform 0.18s;
 }
