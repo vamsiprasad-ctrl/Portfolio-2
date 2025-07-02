@@ -35,3 +35,43 @@ body {
   min-height: 100vh;
   transition: background 0.3s, color 0.3s;
 }
+
+/* Universal Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 2px 8px #5f72bd22;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.18s;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+.btn:hover, .btn:focus {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 18px #9b23ea44;
+  transform: translateY(-2px) scale(1.04);
+}
+.primary-btn {
+  background: var(--gradient);
+  color: #fff;
+}
+.primary-btn:hover, .primary-btn:focus {
+  background: var(--primary);
+  color: #fff;
+}
+.secondary-btn {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.secondary-btn:hover, .secondary-btn:focus {
+  background: var(--primary);
+  color: #fff;
+}

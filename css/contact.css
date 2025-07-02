@@ -92,3 +92,57 @@
 .contact-info a:hover, .contact-info a:focus {
   color: var(--accent);
 }
+
+/* QR Code Stylish Card */
+.qr-code {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(44,46,74,0.82);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(91, 114, 189, 0.18), 0 2px 16px 0 rgba(155,35,234,0.13);
+  padding: 24px 18px 16px 18px;
+  position: relative;
+  border: 2.5px solid rgba(99,102,241,0.13);
+  overflow: hidden;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.qr-code::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle at 60% 40%, #38bdf8 0%, transparent 70%);
+  opacity: 0.18;
+  z-index: 0;
+}
+.qr-code img {
+  z-index: 1;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #38bdf855, 0 1px 2px #0008;
+  border: 3px solid #38bdf8;
+  background: #fff;
+  padding: 8px;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.18s;
+  animation: qr-pop 1.1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.qr-code img:hover {
+  box-shadow: 0 0 32px 8px #38bdf8, 0 8px 32px #6366f144;
+  border-color: #6366f1;
+  transform: scale(1.07) rotate(-2deg);
+}
+@keyframes qr-pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  70% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.qr-code div {
+  margin-top: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  z-index: 1;
+}
