@@ -36,16 +36,30 @@
   box-shadow: 0 8px 48px 0 rgba(91, 114, 189, 0.22), 0 2px 16px 0 rgba(155,35,234,0.15);
   -webkit-backdrop-filter: blur(18px) saturate(1.2);
   backdrop-filter: blur(18px) saturate(1.2);
-  padding: 54px 48px;
+  padding: 72px 64px;
   display: flex;
   align-items: center;
-  gap: 54px;
-  max-width: 950px;
+  gap: 64px;
+  max-width: 1200px;
   width: 100%;
   position: relative;
   border: 2.5px solid rgba(99,102,241,0.18);
   animation: fadein 1.2s;
   overflow: hidden;
+}
+@media (max-width: 900px) {
+  .glass-hero-card {
+    padding: 40px 24px;
+    gap: 32px;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px), (max-width: 480px) {
+  .glass-hero-card {
+    padding: 18px 6px;
+    gap: 12px;
+    max-width: 100vw;
+  }
 }
 .glass-hero-profile {
   display: flex;
@@ -53,14 +67,26 @@
   justify-content: center;
 }
 .glass-profile-img {
-  width: 180px;
-  height: 180px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
   border: 7px solid #fff;
   box-shadow: 0 8px 48px #38bdf855, 0 2px 16px #6366f144;
   background: linear-gradient(120deg, #38bdf8 0%, #6366f1 100%);
   animation: pulse 2.5s infinite;
+}
+@media (max-width: 900px) {
+  .glass-profile-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (max-width: 600px), (max-width: 480px) {
+  .glass-profile-img {
+    width: 150px;
+    height: 150px;
+  }
 }
 .glass-hero-text {
   display: flex;

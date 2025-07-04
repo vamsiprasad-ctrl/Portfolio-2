@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="css/stats.css">
   <link rel="stylesheet" href="css/hackathons.css">
   <link rel="stylesheet" href="css/accessibility.css">
+  <link rel="stylesheet" href="css/skills-visualization.css">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -60,7 +61,7 @@
       <li><a href="#experience"><i class="fa fa-briefcase"></i><span>Experience</span></a></li>
       <li><a href="#hackathons"><i class="fa fa-lightbulb"></i><span>Hackathons</span></a></li>
       <li><a href="#contact"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
-      <li><a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="modern-resume-btn"><i class="fa fa-download"></i> Resume</a></li>
+      <li><a href="assets/Purum Vamsi Prasad Resume.docx" target="_blank" rel="noopener noreferrer" class="modern-resume-btn"><i class="fa fa-download"></i> Resume</a></li>
     </ul>
     <button id="theme-toggle" class="modern-theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
       <i class="fa fa-moon"></i>
@@ -76,7 +77,8 @@
   <div class="glass-hero-content">
     <div class="glass-hero-card" data-aos="fade-up">
       <div class="glass-hero-profile">
-        <img src="assets/vamsi-image.jpg" alt="Purum Vamsi Prasad" class="glass-profile-img" loading="lazy">
+        <img src="assets/vamsi-home.jpg
+        " alt="Purum Vamsi Prasad" class="glass-profile-img" loading="lazy">
       </div>
       <div class="glass-hero-text">
         <div class="glass-hero-status"><i class="fa fa-circle"></i> Open to Opportunities</div>
@@ -89,7 +91,7 @@
         <div class="glass-hero-buttons">
           <a href="#projects" class="btn premium-btn-glass">View Projects</a>
           <a href="#contact" class="btn premium-btn-glass">Contact Me</a>
-          <a href="assets/resume.pdf" class="btn premium-btn-glass" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Resume</a>
+          <a href="assets/Purum Vamsi Prasad Resume.docx" class="btn premium-btn-glass" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Resume</a>
         </div>
         <div class="glass-social-bar">
           <a href="https://github.com/vamsiprasad-ctrl" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -156,22 +158,22 @@
   </div>
     <h2 id="stats-title" class="section-title">Quick Stats</h2>
     <div class="stats-grid">
-      <div class="stat-card">
+      <div class="stat-card" data-aos="fade-up">
         <div class="stat-icon" style="color:var(--primary)"><i class="fa fa-folder-open"></i></div>
         <span class="stat-number gradient-text" data-count="6">0</span>
         <span class="stat-label">Projects</span>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-aos="zoom-in">
         <div class="stat-icon" style="color:var(--accent)"><i class="fa fa-certificate"></i></div>
         <span class="stat-number gradient-text" data-count="8">0</span>
         <span class="stat-label">Certifications</span>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-aos="flip-left">
         <div class="stat-icon" style="color:var(--secondary)"><i class="fa fa-lightbulb"></i></div>
         <span class="stat-number gradient-text" data-count="3">0</span>
         <span class="stat-label">Hackathons</span>
       </div>
-      <div class="stat-card">
+      <div class="stat-card" data-aos="flip-right">
         <div class="stat-icon" style="color:#38bdf8"><i class="fa fa-briefcase"></i></div>
         <span class="stat-number gradient-text" data-count="3">0</span>
         <span class="stat-label">Internships</span>
@@ -187,7 +189,7 @@
   </div>
     <h2 id="skills-title" class="section-title" data-aos="fade-right">Technical Skills</h2>
     <div class="skills-grid" data-aos="fade-up">
-      <div class="skill-category skill-card">
+      <div class="skill-category skill-card" data-aos="fade-up">
         <div class="skill-icon" style="color:#fbbf24"><i class="fa fa-code"></i></div>
         <h3>Languages</h3>
         <ul class="skill-tags">
@@ -199,7 +201,7 @@
           <li><i class="fab fa-js"></i> JavaScript</li>
         </ul>
       </div>
-      <div class="skill-category skill-card">
+      <div class="skill-category skill-card" data-aos="flip-left">
         <div class="skill-icon" style="color:#38bdf8"><i class="fa fa-layer-group"></i></div>
         <h3>Frameworks</h3>
         <ul class="skill-tags">
@@ -209,7 +211,7 @@
 
         </ul>
       </div>
-      <div class="skill-category skill-card">
+      <div class="skill-category skill-card" data-aos="flip-right">
         <div class="skill-icon" style="color:#6366f1"><i class="fa fa-cubes"></i></div>
         <h3>Libraries</h3>
         <ul class="skill-tags">
@@ -223,7 +225,7 @@
   <li><i class="fas fa-water"></i> Seaborn</li>
 </ul>
       </div>
-      <div class="skill-category skill-card">
+      <div class="skill-category skill-card" data-aos="zoom-in">
         <div class="skill-icon" style="color:#0ea5e9"><i class="fa fa-tools"></i></div>
         <h3>Tools</h3>
         <ul class="skill-tags">
@@ -246,13 +248,46 @@
     </div>
   </div>
 </section>
+
+  <!-- Skills Visualization Section -->
+  <section id="skills-visualization" class="skills-visualization-section section">
+    <div class="container skills-viz-container">
+      <h2 class="skills-viz-title">
+        <span class="glow-underline">Skills Visualization</span>
+      </h2>
+      <div class="skills-viz-filters">
+        <button class="skills-viz-filter active" data-category="Languages"><i class="fa fa-code"></i> Languages</button>
+        <button class="skills-viz-filter" data-category="Frameworks"><i class="fa fa-layer-group"></i> Frameworks</button>
+        <button class="skills-viz-filter" data-category="Libraries"><i class="fa fa-cubes"></i> Libraries</button>
+        <button class="skills-viz-filter" data-category="Tools"><i class="fa fa-tools"></i> Tools</button>
+        <button class="skills-viz-filter" data-category="Platforms"><i class="fa fa-desktop"></i> Platforms</button>
+      </div>
+      <div class="skills-viz-pie-grid" id="skills-viz-pie-grid"></div>
+    </div>
+  </section>
+<!-- Modal for Skill Details -->
+<div id="skills-modal" class="skills-modal" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+  <div class="skills-modal-backdrop"></div>
+  <div class="skills-modal-content" role="document">
+    <button class="skills-modal-close" aria-label="Close Details">&times;</button>
+    <h3 class="skills-modal-title"></h3>
+    <canvas id="skillsModalChart" width="600" height="400" role="img"></canvas>
+    <div class="skills-modal-extra"></div>
+  </div>
+</div>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
+<script src="js/skills-particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/skills-visualization.js"></script>
+<script src="js/skills-modal.js"></script>
   <!-- Projects Section -->
 <section id="projects" class="projects-section section" aria-labelledby="projects-title">
   <div class="container">
     <h2 id="projects-title" class="section-title" data-aos="fade-right">Featured Projects</h2>
     <div class="projects-grid" data-aos="fade-up">
       <!-- Project Cards -->
-      <div class="project-card modern-project-card" tabindex="0">
+      <div class="project-card modern-project-card" tabindex="0" data-aos="zoom-in">
         <div class="project-accent"></div>
         <div class="project-header">
           <div class="project-icon"><i class="fa fa-shield-alt"></i></div>
@@ -267,7 +302,7 @@
           <a href="https://your-demo-url.com/she-shield" class="btn primary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
-      <div class="project-card modern-project-card" tabindex="0">
+      <div class="project-card modern-project-card" tabindex="0" data-aos="flip-left">
         <div class="project-accent"></div>
         <div class="project-header">
           <div class="project-icon"><i class="fa fa-robot"></i></div>
@@ -282,7 +317,7 @@
           <a href="https://your-demo-url.com/ai-chatbot" class="btn primary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
-      <div class="project-card modern-project-card" tabindex="0">
+      <div class="project-card modern-project-card" tabindex="0" data-aos="flip-right">
         <div class="project-accent"></div>
         <div class="project-header">
           <div class="project-icon"><i class="fa fa-tasks"></i></div>
@@ -297,7 +332,7 @@
           <a href="https://your-demo-url.com/task-tracker" class="btn primary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
-      <div class="project-card modern-project-card" tabindex="0">
+      <div class="project-card modern-project-card" tabindex="0" data-aos="fade-down">
         <div class="project-accent"></div>
         <div class="project-header">
           <div class="project-icon"><i class="fa fa-film"></i></div>
@@ -312,7 +347,7 @@
           <a href="https://your-demo-url.com/movie-recommendation" class="btn primary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
-      <div class="project-card modern-project-card" tabindex="0">
+      <div class="project-card modern-project-card" tabindex="0" data-aos="fade-up">
         <div class="project-accent"></div>
         <div class="project-header">
           <div class="project-icon"><i class="fa fa-music"></i></div>
@@ -327,7 +362,7 @@
           <a href="https://your-demo-url.com/music-recommendation" class="btn primary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
-      <div class="project-card modern-project-card" tabindex="0">
+      <div class="project-card modern-project-card" tabindex="0" data-aos="fade-up">
         <div class="project-accent"></div>
         <div class="project-header">
           <div class="project-icon"><i class="fa fa-user-astronaut"></i></div>
@@ -392,7 +427,7 @@
     <div class="certifications-timeline" data-aos="fade-up">
       <div class="cert-timeline-bar"></div>
       <div class="cert-timeline-list">
-        <div class="cert-timeline-item">
+        <div class="cert-timeline-item" data-aos="fade-up">
           <div class="cert-timeline-badge" style="background:#2EC866">
             <!-- SVG from Simple Icons -->
             <img src="https://cdn.simpleicons.org/hackerrank/fff/32" alt="HackerRank" />
@@ -403,7 +438,7 @@
             <div class="cert-timeline-year">2023</div>
           </div>
         </div>
-        <div class="cert-timeline-item">
+        <div class="cert-timeline-item" data-aos="zoom-in">
           <div class="cert-timeline-badge" style="background:#0056D2">
             <!-- SVG from Simple Icons -->
             <img src="https://cdn.simpleicons.org/coursera/fff/32" alt="Coursera" />
@@ -414,7 +449,7 @@
             <div class="cert-timeline-year">2023</div>
           </div>
         </div>
-        <div class="cert-timeline-item">
+        <div class="cert-timeline-item" data-aos="flip-left">
           <div class="cert-timeline-badge" style="background:#1F70C1">
             <!-- SVG from Simple Icons -->
             <img src="https://cdn.simpleicons.org/edx/fff/32" alt="EDX" />
@@ -425,7 +460,7 @@
             <div class="cert-timeline-year">2023</div>
           </div>
         </div>
-        <div class="cert-timeline-item">
+        <div class="cert-timeline-item" data-aos="flip-right">
           <div class="cert-timeline-badge" style="background:#15c541">
             <!-- ISRO logo from Wikimedia (PNG fallback) -->
             <img src="https://tse2.mm.bing.net/th/id/OIP.bRFy4KYbNmpaA_mts-r_QAHaHK?pid=Api&P=0&h=180" alt="ISRO" style="width:50px;height:60px;mix-blend-mode: multiply;" />
@@ -442,7 +477,7 @@
       <div class="certifications-timeline" data-aos="fade-up">
       <div class="cert-timeline-bar"></div>
       <div class="cert-timeline-list">
-       <div class="cert-timeline-item">
+       <div class="cert-timeline-item" data-aos="fade-up">
           <div class="cert-timeline-badge" style="background:#dae81a">
             <!-- Intellipat: No SVG, use PNG from your assets -->
             <img src="http://ww1.prweb.com/prfiles/2017/02/01/14455709/intellipaat.png" alt="Intellipat" style="width: 90px;px;px;height:px;" />
@@ -454,7 +489,7 @@
             <div class="cert-timeline-year">2024</div>
           </div>
         </div>
-        <div class="cert-timeline-item">
+        <div class="cert-timeline-item" data-aos="zoom-in">
           <div class="cert-timeline-badge" style="background:#19e527">
             <!-- Intellipat: No SVG, use PNG from your assets -->
             <img src="http://ww1.prweb.com/prfiles/2017/02/01/14455709/intellipaat.png" alt="Intellipat" style="width: 90px;px;px;height:px;" />
@@ -465,7 +500,7 @@
             <div class="cert-timeline-year">2024</div>
           </div>
         </div>
-        <div class="cert-timeline-item">
+        <div class="cert-timeline-item" data-aos="flip-left">
           <div class="cert-timeline-badge" style="background:#3776AB">
             <!-- Python SVG -->
             <img src="https://cdn.simpleicons.org/python/fff/32" alt="Python" />
@@ -476,7 +511,7 @@
             <div class="cert-timeline-year">2024</div>
           </div>
         </div>
-        <div class="cert-timeline-item">
+        <div class="cert-timeline-item" data-aos="flip-right">
           <div class="cert-timeline-badge" style="background:#dbdfdd">
             <!-- Forage: No SVG, use PNG from your assets -->
             <img src="https://www.theforage.com/blog/wp-content/uploads/2023/04/Navy-Stacked-Logo.jpg" alt="Forage" style="width:50px;height:60px;mix-blend-mode: multiply;" />
@@ -499,7 +534,7 @@
   </div>
     <h2 id="hackathons-title" class="section-title" data-aos="fade-right">Hackathon Participation</h2>
     <div class="hackathons-grid modern-hackathon-grid" data-aos="fade-up">
-      <div class="hackathon-card modern-hackathon-card">
+      <div class="hackathon-card modern-hackathon-card" data-aos="fade-up">
         <div class="hackathon-icon" style="background:var(--primary)"><i class="fa fa-trophy"></i></div>
         <div class="hackathon-content">
           <div class="hackathon-title">Smart India Hackathon</div>
@@ -508,7 +543,7 @@
           <div class="hackathon-desc">National-level innovation hackathon with a focus on real-world problem solving.</div>
         </div>
       </div>
-      <div class="hackathon-card modern-hackathon-card">
+      <div class="hackathon-card modern-hackathon-card" data-aos="flip-left">
         <div class="hackathon-icon" style="background:var(--secondary)"><i class="fa fa-lightbulb"></i></div>
         <div class="hackathon-content">
           <div class="hackathon-title">Hack the Future: Gen AI Sprint</div>
@@ -517,7 +552,7 @@
           <div class="hackathon-desc">AI-focused sprint hackathon exploring generative AI solutions.</div>
         </div>
       </div>
-      <div class="hackathon-card modern-hackathon-card">
+      <div class="hackathon-card modern-hackathon-card" data-aos="flip-right">
         <div class="hackathon-icon" style="background:var(--accent)"><i class="fa fa-palette"></i></div>
         <div class="hackathon-content">
           <div class="hackathon-title">DesignVerse UI/UX Challenge</div>
@@ -561,7 +596,7 @@
           <li><i class="fab fa-github"></i> <a href="https://github.com/vamsiprasad-ctrl/" target="_blank" rel="noopener noreferrer">github.com/vamsiprasad-ctrl</a></li>
           <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vamsiprasadpurum" target="_blank" rel="noopener noreferrer">linkedin.com/in/vamsiprasadpurum</a></li>
         </ul>
-        <a href="assets/resume.pdf" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Download Resume</a>
+        <a href="assets/Purum Vamsi Prasad Resume.docx" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> Download Resume</a>
         <a href="assets/vamsi.vcf" class="btn secondary-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-address-card"></i> Download vCard</a>
         <div class="qr-code">
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://linkedin.com/vamsiprasadpuram" alt="LinkedIn QR Code" width="120" height="120" loading="lazy">
@@ -591,6 +626,10 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/main.js"></script>
+  <!-- Chart.js CDN for reliability -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Skills Chart Logic -->
+  <!-- <script src="js/skills-chart.js"></script> -->
   <script>
     // Theme toggle ARIA state update
     const themeToggle = document.getElementById('theme-toggle');
